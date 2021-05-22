@@ -78,9 +78,9 @@
   color: white;
   position: absolute;
   left: 50%;
-  top: 90%;
+  bottom: 5px;
   margin-right: -50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   width: 90%;
 }
 
@@ -105,6 +105,10 @@ a:hover {
 
 .home-page-link:hover > a {
   color: rgb(235, 235, 235);
+}
+
+.copyright {
+  text-align: center;
 }
 
 .shadow-mid-dark {

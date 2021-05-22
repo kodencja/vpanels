@@ -1,0 +1,2 @@
+(this.webpackJsonpvpanels=this.webpackJsonpvpanels||[]).push([[4],{15:function(e,s,c){"use strict";c.r(s);var a=c(0),o=c.n(a),i=c.p+"static/media/open.71f78e3c.mp3",n=c.p+"static/media/close.64c85d1c.mp3",t=c(1);function p(e){return console.log("AudioComp rendered!;"),Object(t.jsxs)("div",{className:"audio",children:[Object(t.jsx)("audio",{src:i,ref:e.refOpen}),Object(t.jsx)("audio",{src:n,ref:e.refClose})]})}s.default=o.a.memo(p)}}]);
+//# sourceMappingURL=4.c43efea3.chunk.js.map
