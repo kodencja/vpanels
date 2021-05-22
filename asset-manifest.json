@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/vpanels/static/css/main.7bc20d9d.chunk.css",
+    "main.js": "/vpanels/static/js/main.d9af4720.chunk.js",
+    "main.js.map": "/vpanels/static/js/main.d9af4720.chunk.js.map",
+    "runtime-main.js": "/vpanels/static/js/runtime-main.e60a40a8.js",
+    "runtime-main.js.map": "/vpanels/static/js/runtime-main.e60a40a8.js.map",
+    "static/js/2.85e6946f.chunk.js": "/vpanels/static/js/2.85e6946f.chunk.js",
+    "static/js/2.85e6946f.chunk.js.map": "/vpanels/static/js/2.85e6946f.chunk.js.map",
+    "static/css/3.74135a8b.chunk.css": "/vpanels/static/css/3.74135a8b.chunk.css",
+    "static/js/3.81edb6fd.chunk.js": "/vpanels/static/js/3.81edb6fd.chunk.js",
+    "static/js/3.81edb6fd.chunk.js.map": "/vpanels/static/js/3.81edb6fd.chunk.js.map",
+    "static/js/4.c43efea3.chunk.js": "/vpanels/static/js/4.c43efea3.chunk.js",
+    "static/js/4.c43efea3.chunk.js.map": "/vpanels/static/js/4.c43efea3.chunk.js.map",
+    "static/js/5.581e55c0.chunk.js": "/vpanels/static/js/5.581e55c0.chunk.js",
+    "static/js/5.581e55c0.chunk.js.map": "/vpanels/static/js/5.581e55c0.chunk.js.map",
+    "static/js/6.0a397a64.chunk.js": "/vpanels/static/js/6.0a397a64.chunk.js",
+    "static/js/6.0a397a64.chunk.js.map": "/vpanels/static/js/6.0a397a64.chunk.js.map",
+    "index.html": "/vpanels/index.html",
+    "static/css/3.74135a8b.chunk.css.map": "/vpanels/static/css/3.74135a8b.chunk.css.map",
+    "static/css/main.7bc20d9d.chunk.css.map": "/vpanels/static/css/main.7bc20d9d.chunk.css.map",
+    "static/js/2.85e6946f.chunk.js.LICENSE.txt": "/vpanels/static/js/2.85e6946f.chunk.js.LICENSE.txt",
+    "static/media/athletes1.9b2bdbe2.jpg": "/vpanels/static/media/athletes1.9b2bdbe2.jpg",
+    "static/media/boy_football-1.f5e5688b.jpg": "/vpanels/static/media/boy_football-1.f5e5688b.jpg",
+    "static/media/close.64c85d1c.mp3": "/vpanels/static/media/close.64c85d1c.mp3",
+    "static/media/open.71f78e3c.mp3": "/vpanels/static/media/open.71f78e3c.mp3",
+    "static/media/salt-harvesting-1.35862fcd.jpg": "/vpanels/static/media/salt-harvesting-1.35862fcd.jpg",
+    "static/media/sea-jump-1.6d55b8f8.jpg": "/vpanels/static/media/sea-jump-1.6d55b8f8.jpg",
+    "static/media/talahi-1.3d8a4316.jpg": "/vpanels/static/media/talahi-1.3d8a4316.jpg",
+    "static/media/water-dream-1.7d228351.jpg": "/vpanels/static/media/water-dream-1.7d228351.jpg",
+    "static/media/youtuber-1.32bcedf4.jpg": "/vpanels/static/media/youtuber-1.32bcedf4.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e60a40a8.js",
+    "static/js/2.85e6946f.chunk.js",
+    "static/css/main.7bc20d9d.chunk.css",
+    "static/js/main.d9af4720.chunk.js"
+  ]
+}
