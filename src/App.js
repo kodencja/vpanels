@@ -13,7 +13,7 @@ import Photo3 from "./img/athletes1.jpg";
 import Photo4 from "./img/talahi-1.jpg";
 import Photo5 from "./img/sea-jump-1.jpg";
 import Photo6 from "./img/youtuber-1.jpg";
-import "./App.css";
+import "./css/style.css";
 const Footer = lazy(() => import("./components/Footer"));
 
 const AudioComp = lazy(() => import("./components/AudioComp"));

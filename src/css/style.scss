@@ -1,0 +1,206 @@
+@mixin transition($time1, $transStyle, $time2) {
+  -o-transition: font-size $time1 $transStyle, opacity $time1 $transStyle,
+    flex $time1 $transStyle, background-image $time2,
+    filter $time1 linear $time2;
+  -ms-transition: font-size $time1 $transStyle, opacity $time1 $transStyle,
+    flex $time1 $transStyle, background-image $time2,
+    filter $time1 linear $time2;
+  transition: font-size $time1 $transStyle, opacity $time1 $transStyle,
+    flex $time1 $transStyle, background-image $time2,
+    filter $time1 linear $time2;
+}
+
+@mixin filter($value1, $value2) {
+  -ms-filter: brightness($value1) grayscale($value2);
+  -o-filter: brightness($value1) grayscale($value2);
+  filter: brightness($value1) grayscale($value2);
+}
+
+%center-div {
+  justify-content: center;
+  align-items: center;
+}
+
+%p-hidden {
+  transform: translateY(100%);
+  font-size: 0.2em;
+  opacity: 0;
+}
+
+%p-showed {
+  transform: translateY(0);
+  font-size: 1em;
+  opacity: 1;
+}
+
+%flex-column {
+  flex-direction: column;
+}
+
+%flex-row {
+  flex-direction: row;
+}
+
+$column: column;
+$row: row;
+
+$font1: "Amatic SC", cursive;
+$font2: "helvetica neue";
+
+html {
+  box-sizing: border-box;
+  font-family: $font2;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.panels {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  background: #6b0f9c;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+  color: white;
+  @extend %center-div;
+  text-align: center;
+  line-height: 1;
+  @include transition(0.8s, cubic-bezier(0.61, -0.19, 0.7, -0.11), 0.2s);
+  font-size: 16px;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  display: flex;
+  @extend %flex-column;
+  @include filter(80%, 100%);
+
+
+  > * {
+      /* Flex Items */
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    @extend %center-div;
+  }
+
+  > *:first-child {
+    @extend %p-hidden;
+  }
+  &.open-active > *:first-child {
+    @extend %p-showed;
+  }
+
+  > *:last-child,
+  > *:nth-child(3) {
+    @extend %p-hidden;
+    line-height: 1;
+  }
+  &.open-active > *:last-child,
+  &.open-active > *:nth-child(3) {
+    @extend %p-showed;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-family: $font1;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+  }
+  &:hover {
+    @include filter(90%, 100%);
+  }
+
+  &.open {
+    flex: 5;
+    font-size: 1.7rem;
+    @include filter(100%, 0%);
+  }
+
+}
+
+@media all and (orientation: landscape) {
+  .panels {
+    flex-direction: $row;
+  }
+}
+
+@media all and (orientation: portrait) {
+  .panels {
+    flex-direction: $column;
+  }
+}
+
+@media all and (max-height: 540px) {
+  .panel {
+    font-size: 0.8rem;
+
+    &.open {
+      flex: 4;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media all and (max-height: 375px) and (orientation: landscape) {
+  .panel {
+    font-size: 0.7rem;
+
+    &.open {
+      flex: 4;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media all and (max-width: 568px) and (orientation: landscape) {
+  .panel {
+    font-size: 0.6rem;
+
+    &.open {
+      flex: 4;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media all and (max-width: 375px) and (orientation: portrait) {
+  .panel {
+    font-size: 0.9rem;
+    
+    &.open {
+      flex: 4;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media all and (min-width: 1366px) and (orientation: landscape),
+  (min-height: 1366px) and (orientation: portrait) {
+  .panel {
+    font-size: 1.4rem;
+
+    &.open {
+      flex: 4;
+      font-size: 2.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 892px) and (min-device-height: 768px) {
+  .panels {
+    flex-direction: $column;
+  }
+}

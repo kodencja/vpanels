@@ -1,0 +1,148 @@
+%border-radius-thin {
+  border-radius: 0.25rem;
+}
+
+%text-center {
+  text-align: center;
+}
+
+%align-center {
+  align-items: center;
+}
+
+@mixin colorFn($color, $prop) {
+  @if $prop == bgr {
+    background-color: $color;
+  } @else {
+    color: $color;
+  }
+}
+
+@mixin boxShadow($val1, $val2, $val3, $val4, $col) {
+  -ms-box-shadow: $val1 $val2 $val3 $val4 $col;
+  -o-box-shadow: $val1 $val2 $val3 $val4 $col;
+  box-shadow: $val1 $val2 $val3 $val4 $col;
+}
+
+@mixin padding($val1, $val2) {
+    padding: $val1 $val2;
+}
+
+.btn {
+  @include colorFn(#212529, c);
+  @extend %text-center;
+  @include colorFn(transparent, bgr);
+  @extend %border-radius-thin;
+  font: 400 13.3333px Arial;
+  align-items: flex-start;
+  text-indent: 0px;
+  text-shadow: none;
+  letter-spacing: normal;
+  word-spacing: normal;
+  writing-mode: horizontal-tb !important;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  margin: 0;
+  font-family: inherit;
+  overflow: visible;
+  text-transform: none;
+  display: inline-block;
+  font-weight: 400;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  @include padding(.375rem, .75rem);
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:hover {
+        color: #212529;
+        text-decoration: none;
+    }
+
+    &:focus{
+        outline: 0;
+        @include boxShadow(0, 0, 0, 0.2rem, rgba(0, 123, 255, 0.25));
+    }
+
+    &.disabled {
+        opacity: 0.65;
+    }
+}
+
+.btn-sm,
+.btn-group-sm > .btn {
+  @include padding(.25rem, .5rem);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  @extend %border-radius-thin;
+}
+
+.btn-down {
+  position: relative;
+  @include colorFn(rgba(139, 139, 139, 0.65), bgr);
+  @include colorFn(rgb(235, 235, 235), c);
+  @include padding(10px, 10px);
+  font-size: 0.9rem;
+  line-height: 1.2;
+  border: none;
+  @extend %border-radius-thin;
+  @extend %align-center;
+
+  &:hover {
+    @include colorFn(rgba(126, 126, 126, 0.65), bgr);
+    @include colorFn(white, c);
+  }
+}
+
+.down-buttons {
+  @extend %align-center;
+  justify-content: space-between;
+  display: flex;
+  @include colorFn(white, c);
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  width: 90%;
+}
+
+a {
+  text-decoration: none;
+  @include colorFn(white, c);
+  
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.dev-box a {
+  @include colorFn(darkslategrey, c);
+  font-weight: 700;
+  float: right;
+
+  &:hover {
+    @include colorFn(rgb(60, 100, 100), c);
+  }
+}
+
+.home-page-link:hover > a {
+  @include colorFn(rgb(235, 235, 235), c);
+}
+
+.copyright {
+  @extend %text-center;
+}
+
+.shadow-mid-dark {
+//   -webkit-box-shadow: 0px 5px 20px -6px rgba(51, 51, 51, 1);
+//   -moz-box-shadow: 0px 5px 20px -6px rgba(51, 51, 51, 1);
+//   -o-box-shadow: 0px 5px 20px -6px rgba(51, 51, 51, 1);
+//   -ms-box-shadow: 0px 5px 20px -6px rgba(51, 51, 51, 1);
+@include boxShadow(0, 5px, 20px, -6px, rgba(51, 51, 51, 1))
+//   box-shadow: 0px 5px 20px -6px rgba(51, 51, 51, 1);
+}
