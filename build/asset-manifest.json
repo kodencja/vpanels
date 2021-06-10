@@ -1,24 +1,22 @@
 {
   "files": {
-    "main.css": "/vpanels/static/css/main.2235ee1b.chunk.css",
-    "main.js": "/vpanels/static/js/main.f578deb7.chunk.js",
-    "main.js.map": "/vpanels/static/js/main.f578deb7.chunk.js.map",
-    "runtime-main.js": "/vpanels/static/js/runtime-main.f53c9dad.js",
-    "runtime-main.js.map": "/vpanels/static/js/runtime-main.f53c9dad.js.map",
+    "main.css": "/vpanels/static/css/main.05fb9cee.chunk.css",
+    "main.js": "/vpanels/static/js/main.1e0cd4d7.chunk.js",
+    "main.js.map": "/vpanels/static/js/main.1e0cd4d7.chunk.js.map",
+    "runtime-main.js": "/vpanels/static/js/runtime-main.1bb84ab4.js",
+    "runtime-main.js.map": "/vpanels/static/js/runtime-main.1bb84ab4.js.map",
     "static/js/2.85e6946f.chunk.js": "/vpanels/static/js/2.85e6946f.chunk.js",
     "static/js/2.85e6946f.chunk.js.map": "/vpanels/static/js/2.85e6946f.chunk.js.map",
-    "static/css/3.71d15194.chunk.css": "/vpanels/static/css/3.71d15194.chunk.css",
-    "static/js/3.81edb6fd.chunk.js": "/vpanels/static/js/3.81edb6fd.chunk.js",
-    "static/js/3.81edb6fd.chunk.js.map": "/vpanels/static/js/3.81edb6fd.chunk.js.map",
+    "static/css/3.87c0bb3e.chunk.css": "/vpanels/static/css/3.87c0bb3e.chunk.css",
+    "static/js/3.413623dc.chunk.js": "/vpanels/static/js/3.413623dc.chunk.js",
+    "static/js/3.413623dc.chunk.js.map": "/vpanels/static/js/3.413623dc.chunk.js.map",
     "static/js/4.c43efea3.chunk.js": "/vpanels/static/js/4.c43efea3.chunk.js",
     "static/js/4.c43efea3.chunk.js.map": "/vpanels/static/js/4.c43efea3.chunk.js.map",
-    "static/js/5.581e55c0.chunk.js": "/vpanels/static/js/5.581e55c0.chunk.js",
-    "static/js/5.581e55c0.chunk.js.map": "/vpanels/static/js/5.581e55c0.chunk.js.map",
-    "static/js/6.0a397a64.chunk.js": "/vpanels/static/js/6.0a397a64.chunk.js",
-    "static/js/6.0a397a64.chunk.js.map": "/vpanels/static/js/6.0a397a64.chunk.js.map",
+    "static/js/5.26b8d947.chunk.js": "/vpanels/static/js/5.26b8d947.chunk.js",
+    "static/js/5.26b8d947.chunk.js.map": "/vpanels/static/js/5.26b8d947.chunk.js.map",
     "index.html": "/vpanels/index.html",
-    "static/css/3.71d15194.chunk.css.map": "/vpanels/static/css/3.71d15194.chunk.css.map",
-    "static/css/main.2235ee1b.chunk.css.map": "/vpanels/static/css/main.2235ee1b.chunk.css.map",
+    "static/css/3.87c0bb3e.chunk.css.map": "/vpanels/static/css/3.87c0bb3e.chunk.css.map",
+    "static/css/main.05fb9cee.chunk.css.map": "/vpanels/static/css/main.05fb9cee.chunk.css.map",
     "static/js/2.85e6946f.chunk.js.LICENSE.txt": "/vpanels/static/js/2.85e6946f.chunk.js.LICENSE.txt",
     "static/media/athletes1.9b2bdbe2.jpg": "/vpanels/static/media/athletes1.9b2bdbe2.jpg",
     "static/media/boy_football-1.f5e5688b.jpg": "/vpanels/static/media/boy_football-1.f5e5688b.jpg",
@@ -31,9 +29,9 @@
     "static/media/youtuber-1.32bcedf4.jpg": "/vpanels/static/media/youtuber-1.32bcedf4.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f53c9dad.js",
+    "static/js/runtime-main.1bb84ab4.js",
     "static/js/2.85e6946f.chunk.js",
-    "static/css/main.2235ee1b.chunk.css",
-    "static/js/main.f578deb7.chunk.js"
+    "static/css/main.05fb9cee.chunk.css",
+    "static/js/main.1e0cd4d7.chunk.js"
   ]
 }
