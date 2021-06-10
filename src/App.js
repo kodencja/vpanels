@@ -6,6 +6,7 @@ import React, {
   lazy,
   Suspense,
 } from "react";
+import "./css/style.min.css";
 import Photo0 from "./img/salt-harvesting-1.jpg";
 import Photo1 from "./img/boy_football-1.jpg";
 import Photo2 from "./img/water-dream-1.jpg";
@@ -13,7 +14,7 @@ import Photo3 from "./img/athletes1.jpg";
 import Photo4 from "./img/talahi-1.jpg";
 import Photo5 from "./img/sea-jump-1.jpg";
 import Photo6 from "./img/youtuber-1.jpg";
-import "./css/style.css";
+
 const Footer = lazy(() => import("./components/Footer"));
 
 const AudioComp = lazy(() => import("./components/AudioComp"));
@@ -63,6 +64,7 @@ function App() {
 
   const toggleActive = useCallback((p, e) => {
     if (e.propertyName.includes("flex")) {
+      // console.log(p);
       console.log("toggleActive Fn");
       p.classList.toggle("open-active");
     }

@@ -1,7 +1,7 @@
 import React from "react";
-import("../css/footer.css");
+import "../css/footer.min.css";
 
-function Footer({ onModalOpen }) {
+function Footer() {
   console.log("Footer Fn");
   return (
     <footer className="down-buttons">

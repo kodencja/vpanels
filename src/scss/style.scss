@@ -21,10 +21,20 @@
   align-items: center;
 }
 
-%p-hidden {
+%p-hidden-up {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  font-size: 0.2em;
+  opacity: 0;
+  height: 25%;
+}
+
+%p-hidden-down {
+  -webkit-transform: translateY(100%);
   transform: translateY(100%);
   font-size: 0.2em;
   opacity: 0;
+  height: 25%;
 }
 
 %p-showed {
@@ -97,7 +107,8 @@ body {
   }
 
   > *:first-child {
-    @extend %p-hidden;
+    @extend %p-hidden-up;
+    // height: 25%;
   }
   &.open-active > *:first-child {
     @extend %p-showed;
@@ -105,8 +116,9 @@ body {
 
   > *:last-child,
   > *:nth-child(3) {
-    @extend %p-hidden;
+    @extend %p-hidden-down;
     line-height: 1;
+    // height: 25%;
   }
   &.open-active > *:last-child,
   &.open-active > *:nth-child(3) {
