@@ -1,16 +1,24 @@
-@mixin transition($time1, $transStyle, $time2) {
-  -o-transition: font-size $time1 $transStyle, opacity $time1 $transStyle,
+@mixin transition($time1, $transStyle, $time2, $time3, $transStyle3) {
+  -o-transition: font-size $time1 $transStyle, opacity $time1,
     flex $time1 $transStyle, background-image $time2,
-    filter $time1 linear $time2;
-  -ms-transition: font-size $time1 $transStyle, opacity $time1 $transStyle,
+    transform $time3 $transStyle3, filter $time1 linear,
+    -webkit-filter $time1 linear;
+  -ms-transition: font-size $time1 $transStyle, opacity $time1,
     flex $time1 $transStyle, background-image $time2,
-    filter $time1 linear $time2;
-  transition: font-size $time1 $transStyle, opacity $time1 $transStyle,
+    transform $time3 $transStyle3, filter $time1 linear,
+    -webkit-filter $time1 linear;
+  -webkit-transition: font-size $time1 $transStyle, opacity $time1,
     flex $time1 $transStyle, background-image $time2,
-    filter $time1 linear $time2;
+    transform $time3 $transStyle3, filter $time1 linear,
+    -webkit-filter $time1 linear;
+  transition: font-size $time1 $transStyle, opacity $time1,
+    flex $time1 $transStyle, background-image $time2,
+    transform $time3 $transStyle3, filter $time1 linear,
+    -webkit-filter $time1 linear;
 }
 
 @mixin filter($value1, $value2) {
+  -webkit-filter: brightness($value1) grayscale($value2);
   -ms-filter: brightness($value1) grayscale($value2);
   -o-filter: brightness($value1) grayscale($value2);
   filter: brightness($value1) grayscale($value2);
@@ -73,31 +81,75 @@ body {
   box-sizing: inherit;
 }
 
+// classes for hiding and showing all particular panels at the beginning
+.show-up-row {
+  transition: transform 1.25s ease-out;
+  transform: rotateY(180deg) translateY(0%) !important;
+}
+
+.hide-down-row {
+  transform: perspective(700px) rotateY(180deg) translateY(100%);
+}
+
+.show-up-col {
+  transition: transform 1.15s ease-out;
+  transform: rotateX(180deg) translateX(0%) !important;
+}
+
+.hide-down-col {
+  transform: perspective(700px) rotateX(180deg) translateX(-100%);
+}
+
+.rotateY {
+  @include transition(
+    0.8s,
+    cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    0.2s,
+    0.75s,
+    ease-out
+  );
+  transform: perspective(700px) rotateY(0deg) !important;
+}
+
+.rotateX {
+  @include transition(
+    0.8s,
+    cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    0.2s,
+    0.75s,
+    ease-out
+  );
+  transform: perspective(700px) rotateX(0deg) !important;
+}
+
 .panels {
   height: 100vh;
   overflow: hidden;
   display: flex;
+  // background-color: rgba(135, 206, 250, 0.856);
+  background-color: rgb(243, 243, 243);
 }
 
 .panel {
+  // perspective: 700px;
   background: #6b0f9c;
   box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
   color: white;
   @extend %center-div;
   text-align: center;
   line-height: 1;
-  @include transition(0.8s, cubic-bezier(0.61, -0.19, 0.7, -0.11), 0.2s);
   font-size: 16px;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   flex: 1;
   display: flex;
   @extend %flex-column;
-  @include filter(80%, 100%);
-
+  @include filter(90%, 100%);
+  // -webkit-filter: grayscale(0.8);
+  // filter: grayscale(80%);
 
   > * {
-      /* Flex Items */
+    /* Flex Items */
     margin: 0;
     width: 100%;
     transition: transform 0.5s;
@@ -132,15 +184,15 @@ body {
     font-size: 2em;
   }
   &:hover {
-    @include filter(90%, 100%);
+    @include filter(90%, 50%);
   }
 
   &.open {
     flex: 5;
     font-size: 1.7rem;
     @include filter(100%, 0%);
+    opacity: 1;
   }
-
 }
 
 @media all and (orientation: landscape) {
@@ -191,7 +243,7 @@ body {
 @media all and (max-width: 375px) and (orientation: portrait) {
   .panel {
     font-size: 0.9rem;
-    
+
     &.open {
       flex: 4;
       font-size: 1.1rem;
